@@ -7,6 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 
+//Config local app
+import { registerLocaleData } from '@angular/common';
+import localEsp from '@angular/common/locales/es';
+import localFr from '@angular/common/locales/fr';
+
+registerLocaleData(localEsp);
+registerLocaleData(localFr);
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -16,7 +24,12 @@ import { SharedModule } from './shared/shared.module';
     ButtonModule,
     SharedModule,
   ],
-  providers: [],
+  providers: [
+    // {
+    //   provide: LOCALE_ID,
+    //   useValue: 'es',
+    // },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
