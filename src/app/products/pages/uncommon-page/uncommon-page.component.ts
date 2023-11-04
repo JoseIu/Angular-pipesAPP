@@ -60,8 +60,8 @@ export class UncommonPageComponent {
 
   public promiseValue: Promise<string> = new Promise((resolve, rejet) => {
     setTimeout(() => {
-      resolve('Renemos data en la promesa.');
-      // console.log('resolve', );
+      resolve('Tenemos data en la promesa.');
+      console.log('Tenemos data en la promesa.');
     }, 3500);
   });
 }
