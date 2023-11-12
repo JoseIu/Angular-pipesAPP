@@ -8,6 +8,7 @@ import { Color, Hero } from '../../interfaces/herto.interface';
 })
 export class OrderComponent {
   public isUpperCase: boolean = false;
+  public orderBy?: keyof Hero;
   public heroes: Hero[] = [
     {
       name: 'Superman',
@@ -38,6 +39,10 @@ export class OrderComponent {
 
   public toggleUperCase(): void {
     this.isUpperCase = !this.isUpperCase;
-    // console.log('hola');
+  }
+
+  public changeOrder(value: keyof Hero) {
+    this.orderBy = value;
+    console.log(this.orderBy);
   }
 }
